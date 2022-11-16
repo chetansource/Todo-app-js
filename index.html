@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html>
 
-<head><!-- head part of the tag is not shown to the user-->
+<head>
+    <!-- head part of the tag is not shown to the user-->
     <title> html page </title>
+    <meta charset="utf-8">
+    <meta name="description"
+        content="this web page tells about the html structure for the beginner level programmersi" />
+    <meta name="viewpoint" content="width=devic-width initial-scale= 1.0" />
+
 </head>
 
 <body>
@@ -23,88 +29,112 @@
         perspiciatis dolor sunt, fuga minima labore iste hic beatae expedita similique nostrum, quaerat eveniet.
         Consequatur?
     </p>
-        <p>
-            <h3>using tags</h3>
-            <br>
-            <b>geekskool</b>  <i>is a bootcamp </i> <!-- bold and italic tag-->   
-            <br>
-            <small>geekskool</small> <!--small tag makes a text small -->
-            <br>
-            <mark>geekskool</mark> <!-- heighlites the text-->
-            <br>
-            <del>geekskool</del><!-- used for scratch the text-->
-            <br>
-            <ins>geekskool</ins><!--underline text-->
-            <br>
-            geekskool<sub> rootconfig</sub> <!-- subscript for a text-->
-            <br>
-            <sup>rootconfig</sup>geekskool<!--super script for a text-->
+    <p>
+    <h3>using tags</h3>
+    <br>
+    <b>geekskool</b> <i>is a bootcamp </i> <!-- bold and italic tag-->
+    <br>
+    <small>geekskool</small>
+    <!--small tag makes a text small -->
+    <br>
+    <mark>geekskool</mark> <!-- heighlites the text-->
+    <br>
+    <del>geekskool</del><!-- used for scratch the text-->
+    <br>
+    <ins>geekskool</ins>
+    <!--underline text-->
+    <br>
+    geekskool<sub> rootconfig</sub> <!-- subscript for a text-->
+    <br>
+    <sup>rootconfig</sup>geekskool
+    <!--super script for a text-->
 
-        </p>
+    </p>
 
 
-       <div>block 1</div><!--division tag block level element it take up the full width-->
-       <div>block 2</div>
+    <div>block 1</div>
+    <!--division tag block level element it take up the full width-->
+    <div>block 2</div>
 
 
-       <span>inline 1 </span>
-       <span>inline 2</span> <!--inline element tag doesnt start in a newline-->
+    <span>inline 1 </span>
+    <span>inline 2</span>
+    <!--inline element tag doesnt start in a newline-->
 
-        <!--ordered list type -->
-        <ol>
-            <li>coffee</li>
-            <li>tea</li>
-            <li>milk</li>
-        </ol>
-        
-        <!--unordered list type-->
-        <ul>
-            <li>milk</li>
-            <li>coffee</li>
-            <li>tea</li>
-        </ul>
+    <!--ordered list type -->
+    <ol>
+        <li>coffee</li>
+        <li>tea</li>
+        <li>milk</li>
+    </ol>
 
-        <dl> <!--definition list contain 2 tages definition title and definition description-->
-            <dt>tea</dt>
-            <dd>-hot drink</dd>
-            <dt>lemon juice</dt>
-            <dd>- soft drink good for hyderation</dd>
-        </dl>
+    <!--unordered list type-->
+    <ul>
+        <li>milk</li>
+        <li>coffee</li>
+        <li>tea</li>
+    </ul>
 
-        <img src="glider.jpg" width="200" height="200" alt="glider image for rootconfig" /> 
-        <br>
-        <a href="https://google.com" >Google</a><!-- anchor tag used to create the hyper links for other pagesz-->
-        <br>
-        <a href="https://google.com" target="_blank"> new google</a> <!-- this will open the link in the new tab-->
+    <dl>
+        <!--definition list contain 2 tages definition title and definition description-->
+        <dt>tea</dt>
+        <dd>-hot drink</dd>
+        <dt>lemon juice</dt>
+        <dd>- soft drink good for hyderation</dd>
+    </dl>
 
-            <!--creating a table-->
-        <table>
-            <th><!--table heading-->
-                <tr><!--table row-->
-                    <th>Heading 0 </th><!--table heading-->
-                    <th>Heading 1 </th>
-                    <th>Heading 2 </th>
-                </tr>
-            </th>
-            <tb>
-                <tr>
-                    <td>data 1</td>
-                    <td>data 2</td>
-                    <td>data 3</td>
-                </tr>
-                <tr>
-                    <td>data 4</td>
-                    <td>data 5</td>
-                    <td>data 6</td>
-                </tr>
-                <tr>
-                    <td>data 7</td>
-                    <td>data 8</td>
-                    <td>data 9</td>
-                </tr>
-            </tb>
+    <img src="glider.jpg" width="200" height="200" alt="glider image for rootconfig" />
+    <br>
+    <a href="https://google.com">Google</a><!-- anchor tag used to create the hyper links for other pagesz-->
+    <br>
+    <a href="https://google.com" target="_blank"> new google</a> <!-- this will open the link in the new tab-->
 
-        </table>
+    <!--creating a table-->
+    <table>
+        <th>
+            <!--table heading-->
+            <tr>
+                <!--table row-->
+                <th>Heading 0 </th>
+                <!--table heading-->
+                <th>Heading 1 </th>
+                <th>Heading 2 </th>
+            </tr>
+        </th>
+        <tb>
+            <tr>
+                <td>data 1</td>
+                <td>data 2</td>
+                <td>data 3</td>
+            </tr>
+            <tr>
+                <td>data 4</td>
+                <td>data 5</td>
+                <td>data 6</td>
+            </tr>
+            <tr>
+                <td>data 7</td>
+                <td>data 8</td>
+                <td>data 9</td>
+            </tr>
+        </tb>
+
+    </table>
+
+    <form>
+        <label for="username">Username</label><br>
+        <input type="text" id="username" /><br /><br />
+        <label for="about"> About you </label><br />
+        <textarea id="about"></textarea><br /><br />
+        <label for="country"> Select<br />
+            <select id="country">
+                <option value='india'>India</option>
+                <option value="china">china</option>
+                <option value="america">america</option>
+            </select>
+        </label>
+    </form>
+
 
 </body>
 
