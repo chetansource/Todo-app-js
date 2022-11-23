@@ -62,6 +62,7 @@
 const todoInput = document.querySelector('.todo-input')
 const todoButton = document.querySelector('.todo-button')
 const todoList=document.querySelector(".todo-list")
+// const edit=document.querySelectorAll(".todo-list li")
 
 //Event Listeners
 
@@ -73,24 +74,38 @@ todoButton.addEventListener('click', (event)=>{
  }
  addTodo();
 });
-todoList.addEventListener('click', deleteCheck)
+
+todoList.addEventListener('click', deleteCheckEdit)
+
 
 
 
 //functions
+
+
 function addTodo(){
+  
     const todoDiv=document.createElement("div") //creating div
     todoDiv.classList.add("todo")
+    const todoProperties=document.createElement("div")
+    to
     const newTodo=document.createElement('li') //creating li to add todo
     newTodo.innerText=todoInput.value
+    saveLocalTodos(todoInput.value)
     newTodo.classList.add("todo-item")
     todoDiv.appendChild(newTodo)
 
+    
+
     //check mark button
-    const checkbutton=document.createElement('button')
-    checkbutton.innerHTML='<i class="fas fa-check"></i>'
-    checkbutton.classList.add("completeBtn")
+    const checkbutton= checkButton()
     todoDiv.appendChild(checkbutton)
+
+    //edit button
+    const editbutton=document.createElement("button")
+    editbutton.innerHTML='<i class="fa-regular fa-pen-to-square"></i>'
+    editbutton.classList.add("editBtn")
+    todoDiv.appendChild(editbutton)
 
     //delete button
     const deletebutton=document.createElement('button')
@@ -101,13 +116,49 @@ function addTodo(){
     todoList.appendChild(todoDiv)
 
     todoInput.value=""
+
+   newTodo.addEventListener('click',(event)={
+
+   })
 }
 
-function deleteCheck(e){
-    console.log(e.target)
+function checkButton () {
+    const checkbutton=document.createElement('button')
+    checkbutton.innerHTML='<i class="fas fa-check"></i>'
+    checkbutton.classList.add("completeBtn")
+    return checkbutton
 }
 
+function deleteCheckEdit(e){
+    const item=e.target //target returns the element when the event is triggered
+    // console.log(item )
+    if(item.classList[0] === "deleteBtn"){
+        const todo=item.parentElement  //one difference between parentNode and parentElement if a element doesnt have a parent PE return as null PN will return something
+        todo.remove()
+    }
 
+    if(item.classList[0] === "completeBtn"){
+        const todo=item.parentElement
+        todo.classList.toggle("done")
+    }
+
+    if(item.classList[0] === "editBtn"){
+        const todo=prompt('you can edit the field',item.parentElement.firstChild.innerText)
+        item.parentElement.firstChild.innerText=todo
+    }
+    
+
+}
+const todos=[]
+function saveLocalTodos(todo){
+    const todoObj={
+        myTodo:todo
+    }
+    todos.push(todoObj)
+    console.log(todos)
+    localStorage.setItem("todos",JSON.stringify(todos))
+
+}
 
 
 

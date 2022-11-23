@@ -56,9 +56,17 @@ header,form{
     flex: 1;
  }
 
- .completeBtn , .deleteBtn{
+ .completeBtn , .deleteBtn, .editBtn{
     cursor: pointer;
     font-size: 14px;
  }
 
- 
+ .fa-check, .fa-trash-can, .fa-pen-to-square{
+    pointer-events: none;
+ }
+
+ .done{
+    text-decoration: line-through;
+    background: rgb(253, 236, 105);
+    opacity: 0.5;
+ }
