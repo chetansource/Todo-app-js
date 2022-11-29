@@ -13,18 +13,16 @@
 </head>
 
 <body>
-
-    <header>
-        <h1> Todo List</h1>
-    </header>
-    <form>
-        <input type="text" class="todo-input" placeholder="what do you have planned.?" />
-        <button  class="todo-button" >
-            <i class="fas fa-plus-square"></i>
-        </button>
-    </form>
-    <div class="todo-container">
-        <!-- <ul class="todo-list"></ul> -->
+    <div class="form">
+        <form class="formtodo">
+            <label id="title" for="inputText"><strong> Todo List</strong></label><br>
+            <input type="text" id="inputText" placeholder="what do you have planned.?" autofocus/>
+            <button id="submitTodo"> 
+                <i class="fas fa-plus-square"></i>
+            </button>
+        </form>
+        <div class="todoContainer">     
+        </div>
 
     </div>
 
