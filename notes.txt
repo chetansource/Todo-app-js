@@ -1,0 +1,25 @@
+--------------postgres---------------
+***** create a user ***** 
+cmd=> sudo -u postgres createuser -s $USER
+
+***** create a database *****
+cmd=> createdb 'database-name'
+CMD=> psql -d 'database-name'
+
+
+**** default User *****
+inorder to use the default postgres user 
+cmd=> sudo -i -u postgres
+cmd=>psql --to get the interface  
+cmd=> \q to quit
+cmd=> \conninfo --logged in information
+cmd=> sudo -u postgres createuser --interactive //create new user
+cmd=> sudo -u postgres createdb 'database name'
+
+####### control flow #########
+install postgresql
+initialize the database
+start postgresql
+verify that you can log in
+pgAdmin is the open source GUI client for postgres   its a web based interface
+																		
