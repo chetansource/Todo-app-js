@@ -52,8 +52,8 @@ function createDivElement (todo) {
 
   elementDiv.addEventListener('click', (event) => {
     const element = event.target.tagName
-    // console.log(element)
-    if (element === 'TEXTAREA' || element === 'SELECT') { return }
+    const element1 = event.target.className
+    if (element === 'TEXTAREA' || element === 'SELECT' || element1 === 'add-date' || element1 === 'addCheck') { return }
     if (properties.style.display === 'none') {
       properties.style.display = 'block'
     } else {
@@ -81,12 +81,11 @@ function addTextInput (todo) {
 function addCheckBox (todo) {
   const checkBox = document.createElement('input')
   checkBox.type = 'checkbox'
-  // console.log(todo.checkBox)
-  console.log(checkBox.checked)
+  checkBox.className = 'addCheck'
   if (todo.checkBox) {
     checkBox.checked = todo.checkBox
   }
-  console.log(checkBox.checked)
+  // console.log(checkBox.checked)
   checkBox.addEventListener('change', () => {
     todo.checkBox = checkBox.checked
     const element = document.getElementById('input' + String(todo.id))
